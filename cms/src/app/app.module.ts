@@ -8,13 +8,14 @@ import { ContactListComponent } from './contacts/contact-list/contact-list.compo
 import { ContactDetailComponent } from './contacts/contact-detail/contact-detail.component';
 import { ContactItemComponent } from './contacts/contact-item/contact-item.component';
 import { DocumentsComponent } from './documents/documents.component';
-import { DocumentsListComponent } from './documents/documents-list/documents-list.component';
-import { DocumentsItemComponent } from './documents/document-item/documents-item.component';
-import { DocumentsDetailComponent } from './documents/document-detail/documents-detail.component';
+import { DocumentsListComponent } from './documents/document-list/document-list.component';
+import { DocumentsItemComponent } from './documents/document-item/document-item.component';
+import { DocumentsDetailComponent } from './documents/document-detail/document-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MessageItemComponent } from './messages/message-item/message-item.component';
 import { MessageEditComponent } from './messages/message-edit/message-edit.component';
 import { MessageListComponent } from './messages/message-list/message-list.component';
+import { DropdownDirective } from './dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MessageListComponent } from './messages/message-list/message-list.compo
     MessagesComponent,
     MessageItemComponent,
     MessageEditComponent,
-    MessageListComponent
+    MessageListComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule
