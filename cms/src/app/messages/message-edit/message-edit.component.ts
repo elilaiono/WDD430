@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 import { Message } from '../message.model';
+import { MessageService } from '../message.service';
 
 @Component({
   selector: 'cms-message-edit',
@@ -9,10 +10,9 @@ import { Message } from '../message.model';
 export class MessageEditComponent implements OnInit {
   @ViewChild('subject') subject: ElementRef;
   @ViewChild('msgText') msgText: ElementRef;
-  @Output() addMessageEvent = new EventEmitter<Message>;
-  currentSender = 'Elijah Aiono';
+  currentSender = '99';
 
-  constructor() {}
+  constructor(private messageService: MessageService) {}
 
   ngOnInit(): void {
     
@@ -29,7 +29,7 @@ export class MessageEditComponent implements OnInit {
       this.currentSender
     );
 
-    this.addMessageEvent.emit(message);
+    this.messageService.addMessage(message);
 
     this.onClear();
   }
