@@ -8,13 +8,13 @@ import { DocumentService } from './document.service';
   styleUrls: ['./documents.component.css']
 })
 export class DocumentsComponent implements OnInit {
-  selectedDocument: Document;
+  selectedDocument: Document[];
 
   constructor(private documentService: DocumentService) {}
 
   ngOnInit() {
-    this.documentService.documentChangedEvent.subscribe(
-      (document: Document) => {
+    this.documentService.documentListChangedEvent.subscribe(
+      (document: Document[]) => {
         this.selectedDocument = document;
       }
     );
