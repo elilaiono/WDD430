@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Contact} from './contact.model';
 import {MOCKCONTACTS} from './MOCKCONTACTS';
-import { Subject } from 'rxjs';
+import { Subject, Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,9 +17,14 @@ export class ContactService {
       this.maxContactId = this.getMaxId();
     }
 
-    getContact(id: string): Contact {
+   //  getContact(id: string): Observable<Contact> {
+   //    const contact = this.contacts.find((contact) => contact.id === id);
+   //    return of (contact)
+   //  }
+
+   getContact(id: string): Contact {
       return this.contacts.find((contact) => contact.id === id);
-    }
+   } 
 
     getContacts(): Contact[] {
       return this.contacts

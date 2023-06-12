@@ -20,5 +20,8 @@ export class ContactListComponent implements OnInit {
     );
   
    this.contacts = this.contactService.getContacts();
+
+  
+
   }
 }
