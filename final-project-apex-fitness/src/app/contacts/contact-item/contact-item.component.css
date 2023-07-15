@@ -1,0 +1,10 @@
+.contact-image {
+    width: 50px;   /* Adjust as needed */
+    height: 50px;  /* Adjust as needed */
+}
+
+.contact-image {
+    width: 50px;       /* Adjust as needed */
+    height: 50px;      /* Adjust as needed */
+    object-fit: cover;
+}

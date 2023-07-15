@@ -19,20 +19,14 @@ export class ContactService {
       this.maxContactId = this.getMaxId();
     }
 
-   //  getContact(id: string): Observable<Contact> {
-   //    const contact = this.contacts.find((contact) => contact.id === id);
-   //    return of (contact)
-   //  }
+   sortAndSend() {
+    this.contacts.sort((a, b) => a.name > b.name ? 1 : b.name > a.name ? -1 : 0);
+    this.contactListChangedEvent.next(this.contacts.slice());
+   } 
 
    getContact(id: string): Contact {
       return this.contacts.find((contact) => contact.id === id);
    } 
-
-   //  getContacts(): Contact[] {
-   //    return this.contacts
-   //      .sort((a, b) => a.name > b.name ? 1 : b.name > a.name ? -1 : 0)
-   //      .slice();
-   //  }
 
    getContacts() {
       this.http

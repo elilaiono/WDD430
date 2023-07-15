@@ -1,0 +1,18 @@
+<!-- <a [routerLink]="['/contacts', contact.id]" class="list-group-item clearfix" routerLinkActive="active">
+    <div class="pull-left">
+      <h4 class="list-group-item-heading">{{ contact?.name }}</h4>
+    </div>
+    <span class="pull-right">
+      <img [src]="contact?.imageUrl" alt="{{ contact?.name }}" class="img-responsive" *ngIf="contact?.imageUrl">
+    </span>
+  </a>
+   -->
+
+   <a [routerLink]="['/contacts', contact.id]" class="list-group-item clearfix" routerLinkActive="active">
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{ contact?.name }}</h4>
+    </div>
+    <span class="pull-right">
+        <img [src]="contact?.imageUrl" alt="{{ contact?.name }}" class="img-responsive contact-image" *ngIf="contact?.imageUrl">
+    </span>
+</a>
